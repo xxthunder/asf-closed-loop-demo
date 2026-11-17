@@ -44,6 +44,11 @@ static bool_t rteAbortCommanded = FALSE;
 static bool_t rteValidAbortCommand = FALSE;
 static bool_t rteSelfDestructState = FALSE;
 
+// Auto Off RTE variables
+#ifdef CONFIG_AUTO_OFF
+static bool_t rteAutoOffState = FALSE;
+#endif
+
 void RteSetPowerState(PowerState currentPowerState)
 {
     rteCurrentPowerState = currentPowerState;
@@ -156,3 +161,15 @@ bool_t RteGetSelfDestructState(void)
 {
     return rteSelfDestructState;
 }
+
+#ifdef CONFIG_AUTO_OFF
+void RteSetAutoOffState(bool_t autoOffState)
+{
+    rteAutoOffState = autoOffState;
+}
+
+bool_t RteGetAutoOffState(void)
+{
+    return rteAutoOffState;
+}
+#endif
