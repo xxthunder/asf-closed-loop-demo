@@ -9,6 +9,9 @@
 #ifdef CONFIG_BRIGHTNESS_ADJUSTMENT_ENABLED
 #include "brightness_controller.h"
 #endif
+#ifdef CONFIG_AUTO_OFF
+#include "auto_off.h"
+#endif
 
 void spled(void)
 {
@@ -17,6 +20,10 @@ void spled(void)
     mainControlKnob();
 #ifdef CONFIG_BRIGHTNESS_ADJUSTMENT_ENABLED
     brightnessController();
+#endif
+#ifdef CONFIG_AUTO_OFF
+    // After powerSignalProcessing() so a power key press counts as operation, before lightController() so the light goes dark in the same cycle.
+    autoOff();
 #endif
     lightController();
     consoleInterface();
