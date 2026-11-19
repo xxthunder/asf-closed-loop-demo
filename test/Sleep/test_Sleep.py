@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 from typing import Generator
 
@@ -6,6 +7,7 @@ from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
 from architecture_diagram import assert_architecture_diagram
 from sphinx_warnings import assert_no_sphinx_warnings
+from traceability import schema_violations
 
 
 class Test_Sleep:
@@ -117,3 +119,13 @@ class Test_Sleep:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
         assert_architecture_diagram(spl_build.build_dir)
         assert_no_sphinx_warnings(spl_build.build_dir)
+
+    @pytest.mark.reports
+    @pytest.mark.gate_develop_pr
+    @pytest.mark.gate_develop_push
+    @pytest.mark.gate_develop_nightly
+    @pytest.mark.gate_release_pr
+    @pytest.mark.gate_release
+    def test_traceability(self):
+        violations = schema_violations(self.variant)
+        assert violations == {}, json.dumps(violations, indent=2)

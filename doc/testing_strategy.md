@@ -40,6 +40,7 @@ assignments. The Base/Dev variant has a reduced test set as noted.
 | test_build (Release) | `build_release` | | | | ✅ | ✅ |
 | test_unittests | `unittests` | | | | | |
 | test_reports | `reports` | ✅ | ✅ | ✅ | ✅ | ✅ |
+| test_traceability | `reports` | ✅ | ✅ | ✅ | ✅ | ✅ |
 | test_static_analysis | `static_analysis` | | | ✅ | | |
 | test_sca_options_file | `sca_options_file` | | | | | |
 | test_sca_check_pr_changes | *(none)* | ✅ | | | ✅ | |
