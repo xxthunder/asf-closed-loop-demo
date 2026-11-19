@@ -9,9 +9,11 @@ Als Leser eines archivierten Berichts möchte ich die Diagramme auch ohne Netz s
 Bericht für sich allein steht.
 
 **Description**:
-`sphinxcontrib.mermaid` rendert im Browser und lädt `mermaid.js` von cdn.jsdelivr.net. Ohne Netz
-zeigt ein Bericht statt des Diagramms den Mermaid-Text. Seit DEMO-006 gilt das auch für das
-Komponentendiagramm, das vorher ein SVG war.
+`sphinxcontrib.mermaid` rendert im Browser. Jede Seite mit einem Mermaid-Block importiert
+`mermaid@11.12.1` von cdn.jsdelivr.net; eine lokale Kopie liegt nicht im Bericht. Ohne Netz zeigt
+jede dieser Seiten statt des Diagramms den Mermaid-Text. Das betrifft alle Mermaid-Diagramme des
+Berichts, nicht erst DEMO-006: die Design-Dokumente von PowerSignalProcessing, PowerButton und
+LightController und seit DEMO-006 die Softwarearchitektur.
 
 **Acceptance Criteria**:
 - [ ] Ein Bericht, ohne Netz im Browser geöffnet, zeigt jedes Mermaid-Diagramm als Bild.
