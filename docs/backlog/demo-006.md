@@ -31,11 +31,12 @@ spl-core (`SplSphinx.default_extensions`).
 - 2026-11-19: Mermaid kennt keine Lollipop-Schnittstellen. Jede Schnittstelle wird ein Pfeil
   zwischen Komponente und RTE, beschriftet mit ihrem Namen (`SetLightValue`). Die Richtung zeigt
   den Datenfluss: ein Set-Aufruf zeigt zur RTE, ein Get-Aufruf von ihr weg.
-- 2026-11-19: Das Diagramm zeigt je Variante nur die Komponenten, die sie wählt. Eine
-  Komponente, die nicht jede Variante wählt, steht hinter einem Jinja-Guard mit demselben
-  KConfig-Namen wie im CMake, zum Beispiel `BrightnessController` hinter
-  `config.BRIGHTNESS_ADJUSTMENT_ENABLED`. Jinja rendert jede Seite des Berichts (`conf.py`,
-  `source-read`).
+- 2026-11-19: Das Diagramm zeigt je Variante nur die Komponenten, die sie wählt. Jede
+  Komponente steht hinter einem Jinja-Guard auf die Komponentenliste der Variante,
+  `build_config.components_info`, die aus ihrer `parts.cmake` kommt. Ein KConfig-Name reicht
+  nicht: Base/Dev lässt die Produktkomponenten über `parts.cmake` weg, nicht über KConfig.
+  Jinja rendert jede Seite des Berichts (`conf.py`, `source-read`), und
+  `doc/components/index.md` liest dieselbe Liste schon.
 - 2026-11-19: Kein Test hält die Knoten und Kanten fest. Die Gleichheit mit der draw.io-Datei
   prüft der Review: der Pull Request listet Komponenten und Schnittstellen aus der draw.io-Datei
   und aus dem Mermaid-Block nebeneinander. Ein Test prüft nur, dass der Bericht jeder Variante
