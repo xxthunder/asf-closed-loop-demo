@@ -1,8 +1,7 @@
 # SPLed DevContainer, DevPod & Bare-Linux Bootstrap — Design
 
 **Status:** implemented and validated (see § Validation).
-**Context:** Phase 2 of [`cross-platform-alignment-proposal.md`](cross-platform-alignment-proposal.md)
-— "Converge DevContainers & add DevPod support".
+**Context:** Phase 2 of the cross-platform alignment: "Converge DevContainers & add DevPod support".
 
 This is the single current design for how a SPLed development environment is provisioned on Linux.
 It consolidates four iterations that were designed and implemented on

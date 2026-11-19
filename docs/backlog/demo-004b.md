@@ -33,6 +33,13 @@ Wer von beiden als Zweiter fertig wird, prüft die Liste nach dem Rebase.
   Variante für sich. Jinja-Guards machen Teile des Berichts variantenabhängig.
 - **DEMO-006**: Wer als Zweiter mergt, hält den Bericht bei null Warnungen.
 
+**Technical Notes**:
+Der Build schreibt die Warnungen mit `-w` in eine Datei, und `test_reports` liest sie. Sphinx'
+eigenes `-W --keep-going` diente nicht: `reports` ist ein `ALL`-Target, also bräche `-W` auch
+`./build.sh --build` und hinterließe keinen Bericht zum Lesen. `-W` träfe außerdem das
+`docs`-Target der Variante, das dieses Item nicht abdeckt. Und die Meldung des Tests nennt jede
+Warnung, statt sie im Build-Log zu lassen.
+
 **Acceptance Criteria**:
 - [ ] Ein Test schlägt fehl, wenn eine Sphinx-Warnung dazukommt.
 - [ ] Die bekannten Warnungen sind behoben oder stehen einzeln und mit Grund auf einer Liste.
