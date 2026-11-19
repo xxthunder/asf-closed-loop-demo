@@ -1,0 +1,117 @@
+{
+  "schemas": [
+    {
+      "id": "impl_implements_spec",
+      "severity": "violation",
+      "message": "An impl must implement at least one spec that this variant renders.",
+      "select": {
+        "properties": {
+          "type": {
+            "const": "impl"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "validate": {
+        "local": {
+          "required": [
+            "implements"
+          ],
+          "properties": {
+            "implements": {
+              "minItems": 1
+            }
+          }
+        },
+        "network": {
+          "implements": {
+            "items": {
+              "local": {
+                "properties": {
+                  "type": {
+                    "const": "spec"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "test_tests_spec",
+      "severity": "violation",
+      "message": "A test must test at least one spec that this variant renders.",
+      "select": {
+        "properties": {
+          "type": {
+            "const": "test"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "validate": {
+        "local": {
+          "required": [
+            "tests"
+          ],
+          "properties": {
+            "tests": {
+              "minItems": 1
+            }
+          }
+        },
+        "network": {
+          "tests": {
+            "items": {
+              "local": {
+                "properties": {
+                  "type": {
+                    "const": "spec"
+                  }
+                },
+                "required": [
+                  "type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "test_has_result",
+      "severity": "violation",
+      "message": "A test must have at least one result: its title must match a test case name.",
+      "select": {
+        "properties": {
+          "type": {
+            "const": "test"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "validate": {
+        "local": {
+          "required": [
+            "results"
+          ],
+          "properties": {
+            "results": {
+              "minItems": 1
+            }
+          }
+        }
+      }
+    }
+  ]
+}

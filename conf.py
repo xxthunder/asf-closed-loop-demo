@@ -60,6 +60,9 @@ source_suffix = extension_configs["source_suffix"]
 # Import default SPL sphinx-needs configuration, which also links test cases to their results
 needs_from_toml = str(files("spl_core.report_generation").joinpath("ubproject.toml"))
 
+# The link rules of impls and tests. sphinx-needs resolves the path against this directory (confdir).
+needs_schema_definitions_from_json = "needs_schema.json"
+
 # Provide all config values to jinja
 html_context = SplSphinx.get_default_html_context()
 include_patterns.extend(html_context["build_config"].get("include_patterns", []))

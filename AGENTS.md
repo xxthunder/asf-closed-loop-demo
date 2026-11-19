@@ -186,6 +186,11 @@ link to fill the matrix.
 Put `:fulfills:` only on a function that exists only where the requirement applies. A function
 that is compiled in every variant claims the requirement for every variant.
 
+**Give every `.. impl::` an `:implements:` and every `.. test::` a `:tests:` that names a spec
+the variant renders. Title a `.. test::` like its test case.** `needs_schema.json` holds these
+rules, and each variant's `test_traceability` fails the gate on a violation. A spec may stand
+without an impl or a test.
+
 ### Reference components
 
 - `components/examples/flight_controller` has the complete chain from `{spec}` blocks through
