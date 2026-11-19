@@ -10,7 +10,6 @@
 
 ### Open
 - [DEMO-009 — Der Bericht zeigt Mermaid-Diagramme auch ohne Netz](demo-009.md)
-- [DEMO-008 — Das Komponentendiagramm zeigt je Variante nur die Schnittstellen, die sie nutzt](demo-008.md)
 - [DEMO-007 — Das Gate wird rot, wenn ein Selbsttest fehlschlägt](demo-007.md)
 - [DEMO-005 — Ein End-to-End-Test für Auto Off](demo-005.md)
 - [DEMO-003 — Eine eigene Rubrik für die Reviews](demo-003.md)
@@ -25,6 +24,9 @@
 - [DEMO-001 — Backlog refinement](demo-001.md)
 
 ### Done
+
+### Superseded
+- [DEMO-008 — Das Komponentendiagramm zeigt je Variante nur die Schnittstellen, die sie nutzt](demo-008.md)
 
 ---
 

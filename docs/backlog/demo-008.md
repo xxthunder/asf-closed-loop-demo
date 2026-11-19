@@ -1,6 +1,6 @@
 # [DEMO-008] Das Komponentendiagramm zeigt je Variante nur die Schnittstellen, die sie nutzt
 
-**Status**: Open
+**Status**: Superseded (2026-11-19)
 **Priority**: Low
 **Component**: `doc/software_architecture/index.md`
 
@@ -27,3 +27,4 @@ Der Code weicht auch sonst vom Diagramm ab: `main_control_knob.c` ruft `RteGetMa
 - [ ] Das Diagramm zeigt die Schnittstellen, die der Code aufruft, und keine anderen.
 
 **Related**: DEMO-006
+**Superseded by**: DEMO-006, which takes the call graph from the code with KConfig guards (2026-11-19).
