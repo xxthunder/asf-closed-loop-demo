@@ -57,3 +57,12 @@ spl-core (`SplSphinx.default_extensions`).
 - 2026-11-19: Die Aufrufe kommen aus dem Code, nicht aus der draw.io-Datei. Ein Aufruf, den der
   Code nur unter einem KConfig-Feature macht, steht hinter einem Jinja-Guard auf dasselbe
   Feature (`config.BLINKING` und so weiter). Damit ist DEMO-008 hier erledigt.
+- 2026-11-19: Jede Klasse zeigt als Member genau die Funktionen, die eine andere Komponente im
+  Diagramm bei ihr aufruft, also die Aufrufe an ihren eingehenden Pfeilen, ohne Präfix
+  (`+Run()` bei OS, `+spled()` bei SPLED, `+IsKeyPressed()` bei KeyboardInterface). Das gilt
+  auch für die RTE: Sie zeigt nur die RTE-Funktionen, die eine Komponente der Variante aufruft.
+  Main hat keine Member. Entscheidung des Autors nach dem ersten `classDiagram` in PR 3.
+- 2026-11-19: Das Architekturdiagramm bekommt die Option `:zoom:` von `sphinxcontrib-mermaid`:
+  Zoom mit dem Mausrad und Verschieben mit der Maus, auch im Vollbild. Knöpfe für den Zoom bietet
+  die Erweiterung nicht; eigenes JavaScript dafür baut das Item nicht. Die übrigen Diagramme
+  bleiben ohne Zoom. d3 kommt dafür wie Mermaid vom CDN (DEMO-009).
