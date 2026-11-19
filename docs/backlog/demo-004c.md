@@ -1,6 +1,6 @@
 # [DEMO-004c] Das Gate wird rot, wenn die Coverage fällt
 
-**Status**: Open
+**Status**: In Progress
 **Priority**: Medium
 **Component**: `test/`, `pytest.ini`
 
