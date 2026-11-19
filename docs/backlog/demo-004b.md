@@ -1,6 +1,6 @@
 # [DEMO-004b] Das Gate wird rot bei einer neuen Sphinx-Warnung
 
-**Status**: Open
+**Status**: In Progress
 **Priority**: High
 **Component**: `test/`, `doc/`
 
