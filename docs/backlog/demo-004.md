@@ -1,6 +1,6 @@
 # [DEMO-004] Das Gate prüft, was in den Berichten steht
 
-**Status**: Open
+**Status**: In Progress
 **Priority**: High
 **Component**: `test/`, `pytest.ini`, `.github/workflows/ci.yml`
 

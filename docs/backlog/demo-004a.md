@@ -1,6 +1,6 @@
 # [DEMO-004a] Das Gate prüft die Traceability der Berichte
 
-**Status**: Open
+**Status**: In Progress
 **Priority**: High
 **Component**: `test/`
 
