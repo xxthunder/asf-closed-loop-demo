@@ -35,9 +35,6 @@ __pycache__/
 # bootstrap files are downloaded during installation
 /.bootstrap
 
-# Drawio Backup Files
-*.drawio.bkp
-
 # Generated files from sple-static-analysis-extension
 /variants/**/ps_configure_options_file.txt
 /basic_c_file.o
