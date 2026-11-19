@@ -19,7 +19,7 @@ Die drei Prüfungen sind unabhängig voneinander. Jede ist eine eigene Substory,
 sich durch die Loop gehen kann.
 
 **Substories**:
-- DEMO-004a: Das Gate prüft die Traceability der Berichte
+- DEMO-004a: Das Gate prüft die Links von Implementierung und Tests
 - DEMO-004b: Das Gate wird rot bei einer neuen Sphinx-Warnung
 - DEMO-004c: Das Gate wird rot, wenn die Coverage fällt
 
