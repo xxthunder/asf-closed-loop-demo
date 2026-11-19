@@ -41,3 +41,6 @@ spl-core (`SplSphinx.default_extensions`).
   prüft der Review: der Pull Request listet Komponenten und Schnittstellen aus der draw.io-Datei
   und aus dem Mermaid-Block nebeneinander. Ein Test prüft nur, dass der Bericht jeder Variante
   das Diagramm enthält.
+- 2026-11-19: Der Mermaid-Block folgt dem Muster der Design-Dokumente, etwa
+  `components/power_button/doc/index.md`: Der Need `SWARCH_001` steht für sich, mit drei
+  Backticks, und der `{mermaid}`-Block steht danach, nicht im Need.
