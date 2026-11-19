@@ -197,6 +197,8 @@ that is compiled in every variant claims the requirement for every variant.
 ### Design documents are built, not just written
 
 `components/<name>/doc/index.md` is rendered into the report by Sphinx, so the build checks it.
+Each variant's `test_reports` fails on any Sphinx warning in that variant's report: add each
+new document to a toctree, or to `exclude_patterns` in `conf.py`.
 A spec that a variant does not select is guarded with Jinja, with the same KConfig name as the
 code:
 

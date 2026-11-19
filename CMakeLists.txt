@@ -44,6 +44,8 @@ if(WIN32)
 else()
     set(ENV{PATH} "${_VENV_BIN_DIR}:$ENV{PATH}")
 endif()
+# Write the Sphinx warnings of each report build to a file; test/sphinx_warnings.py reads it.
+set(SPL_SPHINX_OPTIONS "-w;${CMAKE_BINARY_DIR}/@SHAPE@-sphinx-warnings.log")
 include("${SPL_CORE_DIR}/spl.cmake")
 
 # The object_deps_report extension is currently Windows-only: its index.cmake

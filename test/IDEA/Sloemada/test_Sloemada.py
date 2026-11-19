@@ -5,6 +5,7 @@ import pytest
 from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
 from architecture_diagram import assert_architecture_diagram
+from sphinx_warnings import assert_no_sphinx_warnings
 
 
 class Test_IDEA__Sloemada:
@@ -115,3 +116,4 @@ class Test_IDEA__Sloemada:
         for artifact in expected_artifacts:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
         assert_architecture_diagram(spl_build.build_dir)
+        assert_no_sphinx_warnings(spl_build.build_dir)

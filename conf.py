@@ -4,6 +4,7 @@ import datetime
 
 from importlib.resources import files
 from spl_core.report_generation.spl_sphinx import SplSphinx
+from sphinx_needs.api import add_field
 from spl_core.report_generation.spl_html_settings import html_theme, html_show_sourcelink, html_theme_options, html_sidebars, html_last_updated_fmt  # noqa: F401
 
 day = datetime.date.today()
@@ -27,6 +28,9 @@ exclude_patterns = [
     ".venv",
     ".git",
     "**/test_results.rst",  # We renamed this file, but nobody deletes it.
+    # Linked from README.md and AGENTS.md, but not part of the report.
+    "doc/devcontainer-and-bootstrap-design.md",
+    "doc/testing_strategy.md",
 ]
 
 include_patterns = ["index.md", "doc/**"]
@@ -73,5 +77,12 @@ def rstjinja(app, docname, source):
     source[0] = rendered
 
 
+# needs_from_toml replaces a needs_fields value set here, so the four would be lost;
+# add_field registers them beside the toml's fields.
+DOORS_FIELDS = ("configuration", "origin", "priority", "reqif_uuid")
+
+
 def setup(app):
+    for name in DOORS_FIELDS:
+        add_field(name, "Imported from DOORS", default="")
     app.connect("source-read", rstjinja)
