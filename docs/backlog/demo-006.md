@@ -1,6 +1,6 @@
 # [DEMO-006] Das Komponentendiagramm in Mermaid
 
-**Status**: Open
+**Status**: In Progress
 **Priority**: Medium
 **Component**: `doc/software_architecture/`
 
