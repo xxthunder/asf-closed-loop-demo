@@ -51,6 +51,7 @@ spl-core (`SplSphinx.default_extensions`).
   Flowchart in PR 3. Die RTE ist eine Klasse mit den RTE-Funktionen, die die Komponenten
   aufrufen, als Membern. Jede Komponente ist eine leere Klasse mit `<<component>>`. Ein
   Abhängigkeitspfeil (`..>`) führt vom Aufrufer zum Aufgerufenen, beschriftet mit den Aufrufen.
+  *Ersetzt am 2026-11-19 für die Member: Die Klassen sind nicht mehr leer, siehe unten.*
 - 2026-11-19: Das Diagramm zeigt alle Komponenten des Produkts, nicht nur die der draw.io-Datei:
   dazu `main`, `os`, `spled` und `keyboard_interface`. Es lässt `platform_types` weg, die nur
   Typen enthält, und die Beispiele unter `components/examples`, die nicht zum Produkt gehören.
