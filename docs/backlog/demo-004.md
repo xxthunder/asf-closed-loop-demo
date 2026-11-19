@@ -15,13 +15,13 @@ bauen, nicht was in ihnen steht. Traceability und Coverage prüft nur, wer
 den Bericht von Hand liest. Jeder Bericht endet mit denselben 7 Sphinx-Warnungen. Weil sie immer
 da sind, fiele eine neue Warnung niemandem auf.
 
+Die drei Prüfungen sind unabhängig voneinander. Jede ist eine eigene Substory, damit jede für
+sich durch die Loop gehen kann.
+
+**Substories**:
+- DEMO-004a: Das Gate prüft die Traceability der Berichte
+- DEMO-004b: Das Gate wird rot bei einer neuen Sphinx-Warnung
+- DEMO-004c: Das Gate wird rot, wenn die Coverage fällt
+
 **Acceptance Criteria**:
-- [ ] Je Variante schlägt ein Test fehl, wenn eine Anforderung der Variante keine Spec hat, die
-  sie verfeinert, oder wenn ein Link auf eine Need zeigt, die es nicht gibt.
-- [ ] Ein Test schlägt fehl, wenn eine Sphinx-Warnung dazukommt. Die bekannten Warnungen sind
-  behoben oder stehen einzeln und mit Grund auf einer Liste.
-- [ ] Ein Test schlägt fehl, wenn die Coverage einer Variante unter eine Schwelle fällt. Die
-  Schwelle steht an einer Stelle.
-- [ ] Die Tests tragen den Marker `gate_develop_pr`, laufen also im Gate und in der CI.
-- [ ] Ein absichtlich gebrochener Link, eine neue Warnung und eine gesenkte Coverage machen das
-  Gate jeweils rot.
+- [ ] DEMO-004a, DEMO-004b und DEMO-004c sind erledigt.
