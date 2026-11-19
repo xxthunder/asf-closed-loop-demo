@@ -4,6 +4,7 @@ from typing import Generator
 import pytest
 from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
+from architecture_diagram import assert_architecture_diagram
 
 
 class Test_Base__Dev:
@@ -77,3 +78,4 @@ class Test_Base__Dev:
         expected_artifacts = spl_build.get_components_artifacts(self.components) + artifacts_to_be_archived
         for artifact in expected_artifacts:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
+        assert_architecture_diagram(spl_build.build_dir)
