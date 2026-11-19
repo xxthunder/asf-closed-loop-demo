@@ -1,6 +1,6 @@
 # [DEMO-010] build.sh --selftests endet mit einem Fehlercode, wenn ein Test fehlschlägt
 
-**Status**: Open
+**Status**: Superseded (2026-11-19)
 **Priority**: High
 **Component**: `build.sh`, `build.ps1`, `.github/workflows/ci.yml`
 
@@ -23,3 +23,5 @@ DEMO-004b (2026-11-19): ein absichtlich roter Report-Test, und `build.sh` endete
 - [ ] `build.ps1 -selftests` verhält sich genauso.
 - [ ] Die CI veröffentlicht den JUnit-Bericht weiterhin auch dann, wenn die Tests fehlschlagen.
 - [ ] Ein absichtlich fehlschlagender Test macht `./build.sh --selftests` rot.
+
+**Superseded by**: DEMO-007, which describes the same fault and now carries the details of this item (2026-11-19).
