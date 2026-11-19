@@ -9,6 +9,10 @@
 ## Table of Contents
 
 ### Open
+- [DEMO-006 — Das Komponentendiagramm in Mermaid](demo-006.md)
+- [DEMO-005 — Ein End-to-End-Test für Auto Off](demo-005.md)
+- [DEMO-004 — Das Gate prüft, was in den Berichten steht](demo-004.md)
+- [DEMO-003 — Eine eigene Rubrik für die Reviews](demo-003.md)
 - [DEMO-002 — Auto Off](demo-002.md)
 
 ### In Progress
