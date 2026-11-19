@@ -1,6 +1,6 @@
-# [DEMO-006] Das Komponentendiagramm in Mermaid
+# [DEMO-006] ✅ DONE - Das Komponentendiagramm in Mermaid
 
-**Status**: In Progress
+**Status**: Done (2026-11-19)
 **Priority**: Medium
 **Component**: `doc/software_architecture/`
 
@@ -18,12 +18,12 @@ Der Bericht kann Mermaid schon: `sphinxcontrib.mermaid` gehört zu den Standard-
 spl-core (`SplSphinx.default_extensions`).
 
 **Acceptance Criteria**:
-- [ ] `doc/software_architecture/index.md` zeigt das Komponentendiagramm als Mermaid-`classDiagram`
+- [x] `doc/software_architecture/index.md` zeigt das Komponentendiagramm als Mermaid-`classDiagram`
   mit allen Komponenten des Produkts und den Aufrufen, die ihr Code unter dem KConfig der Variante
   macht.
-- [ ] `spled.drawio` und `sw_arch_component_diagram.svg` sind entfernt; nichts verweist mehr
+- [x] `spled.drawio` und `sw_arch_component_diagram.svg` sind entfernt; nichts verweist mehr
   auf sie.
-- [ ] Der Bericht jeder Variante rendert das Diagramm.
+- [x] Der Bericht jeder Variante rendert das Diagramm.
 
 **Scope Decisions**:
 - 2026-11-19: `spled.drawio` hat auch eine Seite „Feature Model“. Ihr Export
