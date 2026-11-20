@@ -90,6 +90,8 @@ Tests are **Python-based** using pytest for build validation and report checks:
 .\build.ps1 -selftests -marker "build_debug"
 ```
 
+Coverage baseline: each variant's `test_reports` fails when a coverage metric of the variant (lines, functions, branches, conditions) drops below its value in `test/coverage_baseline.json`. The values are per platform, because `rte.c` compiles a POSIX-only block and gcovr measures different code on Linux and Windows. CI checks the Linux values; `build.ps1 -selftests` on Windows checks the Windows values. After a report build, run the script on the platform you built on, with every variant whose report build you ran, and commit the changed `test/coverage_baseline.json` with the change. The script never lowers a value. Commands: Linux and the dev container `.venv/bin/python test/coverage_baseline.py <variant>...`; Windows `.venv\Scripts\python test\coverage_baseline.py <variant>...`.
+
 Component unit tests: GTest/GMock in `components/*/test/*.cc` files, run via `test` build kit.
 
 View reports: Use tasks "Open variant test report" / "Open variant coverage report" from VS Code.

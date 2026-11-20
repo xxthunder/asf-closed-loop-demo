@@ -6,6 +6,7 @@ import pytest
 from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
 from architecture_diagram import assert_architecture_diagram
+from coverage_baseline import assert_coverage_not_dropped
 from sphinx_warnings import assert_no_sphinx_warnings
 from traceability import schema_violations
 
@@ -119,6 +120,7 @@ class Test_Sleep:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
         assert_architecture_diagram(spl_build.build_dir)
         assert_no_sphinx_warnings(spl_build.build_dir)
+        assert_coverage_not_dropped(self.variant, spl_build.build_dir)
 
     @pytest.mark.reports
     @pytest.mark.gate_develop_pr
