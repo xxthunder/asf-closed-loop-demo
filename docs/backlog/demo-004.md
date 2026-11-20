@@ -1,6 +1,6 @@
-# [DEMO-004] Das Gate prüft, was in den Berichten steht
+# [DEMO-004] ✅ DONE - Das Gate prüft, was in den Berichten steht
 
-**Status**: In Progress
+**Status**: Done (2026-11-20)
 **Priority**: High
 **Component**: `test/`, `pytest.ini`, `.github/workflows/ci.yml`
 
@@ -24,4 +24,4 @@ sich durch die Loop gehen kann.
 - DEMO-004c: Das Gate wird rot, wenn die Coverage fällt
 
 **Acceptance Criteria**:
-- [ ] DEMO-004a, DEMO-004b und DEMO-004c sind erledigt.
+- [x] DEMO-004a, DEMO-004b und DEMO-004c sind erledigt.
