@@ -1,0 +1,66 @@
+{
+    "linux": {
+        "Base/Dev": {
+            "line_percent": 100.0,
+            "function_percent": 100.0,
+            "branch_percent": 100.0,
+            "condition_percent": 100.0
+        },
+        "Disco": {
+            "line_percent": 77.0,
+            "function_percent": 65.6,
+            "branch_percent": 86.4,
+            "condition_percent": 94.1
+        },
+        "IDEA/Sloemada": {
+            "line_percent": 90.4,
+            "function_percent": 100.0,
+            "branch_percent": 89.5,
+            "condition_percent": 100.0
+        },
+        "Sleep": {
+            "line_percent": 90.4,
+            "function_percent": 100.0,
+            "branch_percent": 89.5,
+            "condition_percent": 100.0
+        },
+        "Spa": {
+            "line_percent": 89.4,
+            "function_percent": 92.3,
+            "branch_percent": 90.0,
+            "condition_percent": 96.7
+        }
+    },
+    "windows": {
+        "Base/Dev": {
+            "line_percent": 100.0,
+            "function_percent": 100.0,
+            "branch_percent": 100.0,
+            "condition_percent": 100.0
+        },
+        "Disco": {
+            "line_percent": 77.3,
+            "function_percent": 66.7,
+            "branch_percent": 85.7,
+            "condition_percent": 93.8
+        },
+        "IDEA/Sloemada": {
+            "line_percent": 90.4,
+            "function_percent": 100.0,
+            "branch_percent": 89.5,
+            "condition_percent": 100.0
+        },
+        "Sleep": {
+            "line_percent": 90.4,
+            "function_percent": 100.0,
+            "branch_percent": 89.5,
+            "condition_percent": 100.0
+        },
+        "Spa": {
+            "line_percent": 89.4,
+            "function_percent": 92.3,
+            "branch_percent": 90.0,
+            "condition_percent": 96.7
+        }
+    }
+}
