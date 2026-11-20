@@ -1,6 +1,6 @@
-# [DEMO-004b] Das Gate wird rot bei einer neuen Sphinx-Warnung
+# [DEMO-004b] ✅ DONE - Das Gate wird rot bei einer neuen Sphinx-Warnung
 
-**Status**: In Progress
+**Status**: Done (2026-11-20)
 **Priority**: High
 **Component**: `test/`, `doc/`
 
@@ -41,9 +41,9 @@ eigenes `-W --keep-going` diente nicht: `reports` ist ein `ALL`-Target, also br�
 Warnung, statt sie im Build-Log zu lassen.
 
 **Acceptance Criteria**:
-- [ ] Ein Test schlägt fehl, wenn eine Sphinx-Warnung dazukommt.
-- [ ] Die bekannten Warnungen sind behoben oder stehen einzeln und mit Grund auf einer Liste.
-- [ ] Der Test trägt den Marker `gate_develop_pr`, läuft also im Gate und in der CI.
-- [ ] Eine absichtlich erzeugte neue Warnung macht das Gate rot.
+- [x] Ein Test schlägt fehl, wenn eine Sphinx-Warnung dazukommt.
+- [x] Die bekannten Warnungen sind behoben oder stehen einzeln und mit Grund auf einer Liste.
+- [x] Der Test trägt den Marker `gate_develop_pr`, läuft also im Gate und in der CI.
+- [x] Eine absichtlich erzeugte neue Warnung macht das Gate rot.
 
 **Related**: DEMO-006
