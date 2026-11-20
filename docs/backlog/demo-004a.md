@@ -1,6 +1,6 @@
-# [DEMO-004a] Das Gate prüft die Links von Implementierung und Tests
+# [DEMO-004a] ✅ DONE - Das Gate prüft die Links von Implementierung und Tests
 
-**Status**: In Progress
+**Status**: Done (2026-11-20)
 **Priority**: High
 **Component**: `conf.py`, `test/`
 
@@ -28,11 +28,11 @@ Verstoß aber mit Exit 0, weil spl-core es ohne `-W` aufruft. Ein Test je Varian
 - 2026-11-19: Die Prüfung nutzt die Schema-Validierung von sphinx-needs, keinen eigenen Checker.
 
 **Acceptance Criteria**:
-- [ ] Ein Schema der Schema-Validierung von sphinx-needs hält die Regeln an einer Stelle fest:
+- [x] Ein Schema der Schema-Validierung von sphinx-needs hält die Regeln an einer Stelle fest:
   Eine Implementierung zeigt mit `:implements:` auf mindestens eine Spec, ein Test mit `:tests:`
   auf mindestens eine Spec, und ein Test hat mindestens ein Ergebnis (`results`).
-- [ ] Je Variante schlägt ein Test fehl, wenn `schema_violations.json` des Berichts einen Verstoß
+- [x] Je Variante schlägt ein Test fehl, wenn `schema_violations.json` des Berichts einen Verstoß
   enthält. Seine Meldung nennt die Need und den Verstoß.
-- [ ] Eine Spec ohne Implementierung oder ohne Test macht das Gate nicht rot.
-- [ ] Die Tests tragen den Marker `gate_develop_pr`, laufen also im Gate und in der CI.
-- [ ] Ein absichtlich gebrochener Link und ein Test ohne Ergebnis machen das Gate jeweils rot.
+- [x] Eine Spec ohne Implementierung oder ohne Test macht das Gate nicht rot.
+- [x] Die Tests tragen den Marker `gate_develop_pr`, laufen also im Gate und in der CI.
+- [x] Ein absichtlich gebrochener Link und ein Test ohne Ergebnis machen das Gate jeweils rot.

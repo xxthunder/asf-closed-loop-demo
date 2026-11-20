@@ -18,12 +18,12 @@
 ### In Progress
 - [DEMO-004c — Das Gate wird rot, wenn die Coverage fällt](demo-004c.md)
 - [DEMO-004b — Das Gate wird rot bei einer neuen Sphinx-Warnung](demo-004b.md)
-- [DEMO-004a — Das Gate prüft die Links von Implementierung und Tests](demo-004a.md)
 - [DEMO-004 — Das Gate prüft, was in den Berichten steht](demo-004.md)
 - [DEMO-001 — Backlog refinement](demo-001.md)
 
 ### Done
 - [DEMO-006 — Das Komponentendiagramm in Mermaid](demo-006.md)
+- [DEMO-004a — Das Gate prüft die Links von Implementierung und Tests](demo-004a.md)
 
 ### Superseded
 - [DEMO-010 — build.sh --selftests endet mit einem Fehlercode, wenn ein Test fehlschlägt](demo-010.md)
