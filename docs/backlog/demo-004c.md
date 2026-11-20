@@ -1,6 +1,6 @@
-# [DEMO-004c] Das Gate wird rot, wenn die Coverage fällt
+# [DEMO-004c] ✅ DONE - Das Gate wird rot, wenn die Coverage fällt
 
-**Status**: In Progress
+**Status**: Done (2026-11-20)
 **Priority**: Medium
 **Component**: `test/`, `AGENTS.md`
 
@@ -13,11 +13,11 @@ Die Coverage steht heute nur im Coverage-Bericht jeder Variante. Ob sie fällt, 
 Bericht von Hand liest.
 
 **Acceptance Criteria**:
-- [ ] Ein Test schlägt fehl, wenn eine Coverage-Metrik einer Variante unter ihren Basiswert
+- [x] Ein Test schlägt fehl, wenn eine Coverage-Metrik einer Variante unter ihren Basiswert
   fällt. Das gilt für Lines, Functions, Branches und Conditions.
-- [ ] Die Basiswerte stehen in einer Datei im Repo, je Plattform, Variante und Metrik.
-- [ ] Der Test trägt den Marker `gate_develop_pr`, läuft also im Gate und in der CI.
-- [ ] Eine absichtlich gesenkte Coverage macht das Gate rot.
+- [x] Die Basiswerte stehen in einer Datei im Repo, je Plattform, Variante und Metrik.
+- [x] Der Test trägt den Marker `gate_develop_pr`, läuft also im Gate und in der CI.
+- [x] Eine absichtlich gesenkte Coverage macht das Gate rot.
 
 **Scope Decisions**:
 - 2026-11-20: Das Gate prüft, dass die Coverage nicht fällt. Es prüft keinen Mindestwert. Die
