@@ -109,6 +109,18 @@ CI runs Linux only. `build.ps1` and the dev container are not built in CI.
 
 CI is a **thin wrapper**: it only sets up the OS and calls the build scripts, so "green in CI" ⇔ "works locally". Runners are pinned to explicit images (never `*-latest`), so an OS/toolchain bump is always a reviewable change rather than a surprise.
 
+## Closed loop
+
+An item runs through the closed loop on this gate:
+
+- **Gate**: `scripts/gate`, run from the repository root in the dev container. It runs the
+  checks of the CI's pull request job, `./build.sh --install` and
+  `./build.sh --selftests --marker gate_develop_pr`: every variant is built, and every
+  selftest and report check passes. `pypeline run` is not the gate: it only sets up the
+  environment.
+- **CI**: confirms the gate on the pull request. It runs the same checks on a bare Linux
+  runner, so every check also runs locally.
+
 ## SPL-Specific CMake Patterns
 
 Component `CMakeLists.txt` files use **spl-core macros** (not standard CMake):
