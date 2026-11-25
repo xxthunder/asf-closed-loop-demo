@@ -1,0 +1,12 @@
+#!/bin/bash
+# The gate of the closed loop: the checks the CI runs on a pull request to develop.
+# Run it from the repository root, inside the dev container or on a provisioned Linux host.
+# It exits 0 only when every variant builds and every selftest passes.
+
+set -e
+set -o pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+./build.sh --install
+./build.sh --selftests --marker gate_develop_pr
