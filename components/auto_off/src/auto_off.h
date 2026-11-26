@@ -1,0 +1,8 @@
+#ifndef AUTO_OFF_H
+#define AUTO_OFF_H
+
+#include "rte.h"
+
+void autoOff(void);
+
+#endif /* AUTO_OFF_H */

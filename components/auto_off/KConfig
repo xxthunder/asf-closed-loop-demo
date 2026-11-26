@@ -1,0 +1,16 @@
+menu "Auto Off"
+    config AUTO_OFF
+        bool "Auto Off"
+        default n
+        help
+            Switches the light off after AUTO_OFF_TIMEOUT seconds without use.
+
+    config AUTO_OFF_TIMEOUT
+        int "Auto off timeout (in seconds)"
+        depends on AUTO_OFF
+        default 10
+        range 5 7200
+        help
+            The time without use, in seconds, after which the light switches off.
+            The value can be set between 5 and 7200 seconds.
+endmenu

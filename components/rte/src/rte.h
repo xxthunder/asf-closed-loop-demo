@@ -228,4 +228,20 @@ void RteSetSelfDestructState(bool_t selfDestructState);
  */
 bool_t RteGetSelfDestructState(void);
 
+#ifdef CONFIG_AUTO_OFF
+/**
+ * @brief Sets the auto off state.
+ *
+ * @param autoOffState TRUE once the auto off timer switched the light off, FALSE from the next use on.
+ */
+void RteSetAutoOffState(bool_t autoOffState);
+
+/**
+ * @brief Retrieves the auto off state.
+ *
+ * @return TRUE if the auto off timer switched the light off, FALSE otherwise.
+ */
+bool_t RteGetAutoOffState(void);
+#endif // CONFIG_AUTO_OFF
+
 #endif // RTE_H
