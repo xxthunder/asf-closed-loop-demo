@@ -6,6 +6,7 @@ import pytest
 from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
 from architecture_diagram import assert_architecture_diagram
+from auto_off import assert_auto_off
 from coverage_baseline import assert_coverage_not_dropped
 from sphinx_warnings import assert_no_sphinx_warnings
 from traceability import schema_violations
@@ -14,6 +15,7 @@ from traceability import schema_violations
 class Test_Sleep:
     variant: str = "Sleep"
     components: list[str] = [
+        "components/auto_off",
         "components/brightness_controller",
         "components/light_controller",
         "components/main_control_knob",
@@ -118,6 +120,7 @@ class Test_Sleep:
         expected_artifacts = spl_build.get_components_artifacts(self.components) + artifacts_to_be_archived
         for artifact in expected_artifacts:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
+        assert_auto_off(spl_build.build_dir, 10)
         assert_architecture_diagram(spl_build.build_dir)
         assert_no_sphinx_warnings(spl_build.build_dir)
         assert_coverage_not_dropped(self.variant, spl_build.build_dir)

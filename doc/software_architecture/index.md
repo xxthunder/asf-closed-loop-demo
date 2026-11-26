@@ -28,6 +28,7 @@
 {%- if config.BRIGHTNESS_ADJUSTMENT_PERIOD %}
 {%- set light_controller_calls = light_controller_calls + ['GetBrightnessAdjustmentCounter'] %}
 {%- endif %}
+{% set auto_off_calls = ['GetPowerKeyPressedEvent', 'GetPowerState', 'IsKeyPressed', 'SetAutoOffState', 'SetPowerState'] %}
 {% set console_interface_calls = ['GetLightValue'] %}
 {% set rte_calls = [] %}
 {%- if 'components_power_button' in selected %}
@@ -44,6 +45,9 @@
 {%- endif %}
 {%- if 'components_light_controller' in selected %}
 {%- set rte_calls = rte_calls + light_controller_calls %}
+{%- endif %}
+{%- if 'components_auto_off' in selected %}
+{%- set rte_calls = rte_calls + auto_off_calls %}
 {%- endif %}
 {%- if 'components_console_interface' in selected %}
 {%- set rte_calls = rte_calls + console_interface_calls %}
@@ -80,6 +84,9 @@ classDiagram
     spled ..> main_control_knob : mainControlKnob
 {% if spled_brightness %}
     spled ..> brightness_controller : brightnessController
+{% endif %}
+{% if 'components_auto_off' in selected %}
+    spled ..> auto_off : autoOff
 {% endif %}
     spled ..> light_controller : lightController
     spled ..> console_interface : consoleInterface
@@ -128,6 +135,15 @@ classDiagram
 {%- endif %}
     }
     light_controller ..> rte : {{ light_controller_calls | sort | join(', ') }}
+{% endif %}
+{% if 'components_auto_off' in selected %}
+    class auto_off["AutoOff"] {
+        <<component>>
+{%- if 'components_spled' in selected %}
+        +autoOff()
+{%- endif %}
+    }
+    auto_off ..> rte : {{ auto_off_calls | sort | join(', ') }}
 {% endif %}
 {% if 'components_console_interface' in selected %}
     class console_interface["ConsoleInterface"] {

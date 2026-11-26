@@ -6,6 +6,7 @@ import pytest
 from spl_core.test_utils.spl_build import SplBuild
 from spl_core.test_utils.artifacts_archiver import ArtifactsArchiver
 from architecture_diagram import assert_architecture_diagram
+from auto_off import assert_auto_off
 from coverage_baseline import assert_coverage_not_dropped
 from sphinx_warnings import assert_no_sphinx_warnings
 from traceability import schema_violations
@@ -74,6 +75,11 @@ class Test_Spa:
         for artifact in artifacts:
             assert artifact.exists(), f"Variant artifact {artifact} does not exist"
 
+        binary = (spl_build.build_dir / "spled.exe").read_bytes()
+        assert b"RteSetAutoOffState" not in binary, "spled.exe contains RteSetAutoOffState"
+        assert b"RteGetAutoOffState" not in binary, "spled.exe contains RteGetAutoOffState"
+        assert b"autoOff" not in binary, "spled.exe contains autoOff"
+
     @pytest.mark.unittests
     def test_unittests(self):
         # Arrange
@@ -124,6 +130,7 @@ class Test_Spa:
         expected_artifacts = spl_build.get_components_artifacts(self.components) + artifacts_to_be_archived
         for artifact in expected_artifacts:
             assert artifact.exists(), f"Artifact {artifact} does not exist"
+        assert_auto_off(spl_build.build_dir, None)
         assert_architecture_diagram(spl_build.build_dir)
         assert_no_sphinx_warnings(spl_build.build_dir)
         assert_coverage_not_dropped(self.variant, spl_build.build_dir)
