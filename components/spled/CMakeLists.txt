@@ -5,6 +5,10 @@ if(BRIGHTNESS_ADJUSTMENT_ENABLED STREQUAL "True")
     spl_add_required_interface(components/brightness_controller)
 endif()
 
+if(AUTO_OFF STREQUAL "True")
+    spl_add_required_interface(components/auto_off)
+endif()
+
 spl_add_required_interface(components/console_interface)
 spl_add_required_interface(components/keyboard_interface)
 spl_add_required_interface(components/light_controller)
