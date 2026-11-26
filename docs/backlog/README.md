@@ -14,9 +14,9 @@
 - [DEMO-007 — Das Gate wird rot, wenn ein Selbsttest fehlschlägt](demo-007.md)
 - [DEMO-005 — Ein End-to-End-Test für Auto Off](demo-005.md)
 - [DEMO-003 — Eine eigene Rubrik für die Reviews](demo-003.md)
-- [DEMO-002 — Auto Off](demo-002.md)
 
 ### In Progress
+- [DEMO-002 — Auto Off](demo-002.md)
 - [DEMO-001 — Backlog refinement](demo-001.md)
 
 ### Done
