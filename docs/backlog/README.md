@@ -9,6 +9,7 @@
 ## Table of Contents
 
 ### Open
+- [DEMO-012 — Jede Variante prüft, dass sie genau ihre Komponenten baut](demo-012.md)
 - [DEMO-011 — Das Backlog liegt in doc/backlog bei der übrigen Dokumentation](demo-011.md)
 - [DEMO-009 — Der Bericht zeigt Mermaid-Diagramme auch ohne Netz](demo-009.md)
 - [DEMO-007 — Das Gate wird rot, wenn ein Selbsttest fehlschlägt](demo-007.md)
