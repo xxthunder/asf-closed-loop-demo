@@ -1,6 +1,6 @@
-# [DEMO-002] Auto Off
+# [DEMO-002] ✅ DONE - Auto Off
 
-**Status**: In Progress
+**Status**: Done (2026-11-27)
 **Priority**: High
 **Component**: `KConfig`, `components/`, `variants/`
 
@@ -14,11 +14,11 @@ eines Produkts. Disco Light und Spa Light schalten sich nicht selbst aus und ent
 dafür nicht. Die Anforderungen stehen im Repository: REQ_39, REQ_40 und REQ_59.
 
 **Acceptance Criteria**:
-- [ ] Eine neue Komponente setzt die drei Anforderungen um.
-- [ ] Das Feature ist über das Feature-Modell wählbar: ein Schalter und eine Zeitdauer.
-- [ ] Sleep Light und IDEA/Sloemada wählen es mit 10 Sekunden, Disco Light und Spa Light nicht.
-- [ ] Es gibt ein Detailed Design und Unit-Tests, die darauf verweisen.
-- [ ] Alle Varianten bauen, alle Tests sind grün, und der Bericht zeigt Coverage und Traceability.
+- [x] Eine neue Komponente setzt die drei Anforderungen um.
+- [x] Das Feature ist über das Feature-Modell wählbar: ein Schalter und eine Zeitdauer.
+- [x] Sleep Light und IDEA/Sloemada wählen es mit 10 Sekunden, Disco Light und Spa Light nicht.
+- [x] Es gibt ein Detailed Design und Unit-Tests, die darauf verweisen.
+- [x] Alle Varianten bauen, alle Tests sind grün, und der Bericht zeigt Coverage und Traceability.
 
 **Scope Decisions**:
 - **Namen** (Entscheidung des Autors, 2026-11-13): Die Komponente heißt `components/auto_off`,
