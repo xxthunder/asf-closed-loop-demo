@@ -1,0 +1,17 @@
+menu "Auto Off"
+    config AUTO_OFF
+        bool "Auto Off"
+        default n
+        help
+            Switch the light off after a period without activity.
+
+    config AUTO_OFF_TIMEOUT
+        int "Auto Off Timeout (in seconds)"
+        depends on AUTO_OFF
+        default 10
+        range 5 7200
+        help
+            Time without activity (Up key, Down key, power key) after which the
+            light is switched off. The value is in seconds and can be set
+            between 5 and 7200 seconds.
+endmenu
