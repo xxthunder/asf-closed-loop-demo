@@ -13,15 +13,15 @@
             "condition_percent": 94.1
         },
         "IDEA/Sloemada": {
-            "line_percent": 90.4,
+            "line_percent": 91.8,
             "function_percent": 100.0,
-            "branch_percent": 89.5,
+            "branch_percent": 92.6,
             "condition_percent": 100.0
         },
         "Sleep": {
-            "line_percent": 90.4,
+            "line_percent": 91.8,
             "function_percent": 100.0,
-            "branch_percent": 89.5,
+            "branch_percent": 92.6,
             "condition_percent": 100.0
         },
         "Spa": {
